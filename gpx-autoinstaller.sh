@@ -4,7 +4,7 @@ my_ip=$(ip route get 8.8.8.8 | awk -F"src " 'NR==1{split($2,a," ");print a[1]}')
 mysql_password=$(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c16) &&
 sudo yum install httpd zip php unzip php-mysql php-bcmath php-posix php-common mysql mysql-server glibc.i686 libstdc++.i686 libgcc.i686 unzip wget -y &&
 service mysqld start &&
-echo -e "\ny\nspvb7494\nspvb7494\ny\nn\ny\ny" | /usr/bin/mysql_secure_installation &&
+echo -e "\ny\"$mysql_password"\"$mysql_password"\ny\nn\ny\ny" | /usr/bin/mysql_secure_installation &&
 mysql -h"localhost" -u"root" -p""$mysql_password"" -e "CREATE DATABASE gamepanelx;" &&
 mysql -h"localhost" -u"root" -p""$mysql_password"" -e "CREATE USER 'gpx'@localhost IDENTIFIED BY '$mysql_password';" &&
 mysql -h"localhost" -u"root" -p""$mysql_password"" -e "GRANT ALL PRIVILEGES ON gamepanelx.* TO 'gpx'@localhost;" &&

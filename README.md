@@ -1,10 +1,9 @@
 # countergit
 GamePanelX Auto Installer &amp; HLDS
 
-Installation:
+<b>Game Panel Installation:</b> 
 
-wget https://raw.githubusercontent.com/CounterGit/countergit/master/gpx-autoinstaller.sh
-chmod +x gpx-autoinstaller.sh
+wget https://raw.githubusercontent.com/CounterGit/countergit/master/gpx-autoinstaller.sh <br>
+chmod +x gpx-autoinstaller.sh <br>
 ./gpx-autoinstaller.sh
-
 *Warning this auto installer supports Centos 6 only!!!

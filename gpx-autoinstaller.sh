@@ -6,7 +6,7 @@ sudo yum install httpd zip php unzip php-mysql php-bcmath php-posix php-common m
 service mysqld start &&
 echo -e "\ny\nspvb7494\nspvb7494\ny\nn\ny\ny" | /usr/bin/mysql_secure_installation &&
 mysql -h"localhost" -u"root" -p""$mysql_password"" -e "CREATE DATABASE gamepanelx;" &&
-mysql -h"localhost" -u"root" -p""$mysql_password"" -e "CREATE USER 'gpx'@localhost IDENTIFIED BY ''$mysql_password'';" &&
+mysql -h"localhost" -u"root" -p""$mysql_password"" -e "CREATE USER 'gpx'@localhost IDENTIFIED BY '$mysql_password';" &&
 mysql -h"localhost" -u"root" -p""$mysql_password"" -e "GRANT ALL PRIVILEGES ON gamepanelx.* TO 'gpx'@localhost;" &&
 mysql -h"localhost" -u"root" -p""$mysql_password"" -e "use gamepanelx;" &&
 cd /var/www/html &&
